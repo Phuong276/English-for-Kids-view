@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.nav {
+  background-color: none;
+  font-family: "Chewy";
+  z-index: 1;
+}
+
+.nav a {
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  width: 33%;
+}
+
+.nav a:hover {
+  background-color: none;
+  color: rgb(127, 245, 127);
+  transition: transform .2s;
+  transform: scale(1.2); 
+}
+
+/************************/
+/*                      */
+/*     LANDING PAGE     */
+/*                      */
+/************************/
+
+/* MEDIA QUERIES  */
+@media only screen and (max-width: 950px) {
+  #root .LPImage {
+    height: 300px;
+  }
+  #root .welcome {
+    font-size: 2.5em;
+  }
+  #root .rc img {
+    height: 350px;
+  }
+  .resultImage div p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  #root .LPImage {
+    height: 200px;
+  }
+  #root .welcome {
+    font-size: 2em;
+  }
+  #root .column {
+    flex: 100%;
+  }
+  #root .rc img {
+    height: 300px;
+  }
+  #root .text {
+    font-size: 50px;
+  }
+  .resultImage div p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #root .LPImage {
+    height: 150px;
+  }
+  #root .welcome {
+    font-size: 1.5em;
+  }
+  #root .rc img {
+    height: 200px;
+  }
+  #root .resultImage div {
+    height: 100px;
+  }
+  .resultImage div p {
+    font-size: 1rem;
+  }
+}
+
+.LPImage {
+  background-image: url("./images/header-background.jpg");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  width: 100%;
+}
+
+.welcome {
+  font-family: "Bungee Shade", cursive;
+  width: 100%;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: red;
+  font-weight: 900;
+  transition: transform .2s;
+}
+
+.welcome:hover {
+  transform: scale(1.05); 
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.column:hover img {
+  opacity: 0.3;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.column:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: none;
+  color: red;
+  font-family: "chewy";
+  font-weight: 900;
+  font-size: 80px;
+  padding: 12px 24px;
+}
+
+.rc {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline;
+}
+.rc img {
+  width: 100%;
+  height: 400px;
+}
+
+h1 {
+  margin-top: 0px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#img {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.options {
+  display: flex;
+  margin: 10px auto;
+  width: 80%;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Chewy";
+}
+
+.options-li {
+  flex: 30%;
+  padding: 5px;
+  margin: 10px 50px 10px 20px;
+  background: gray;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid deepskyblue;
+  border-radius: 15px;
+}
+
+.options-li:hover {
+  background-color: deepskyblue;
+  color: white;
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(0, 5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/************************/
+/*                      */
+/*      QUIZ Page       */
+/*                      */
+/************************/
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+.bgImage {
+  background: url("./images/frame.jpg") no-repeat center center fixed;
+  position: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* CORRECT ANSWER */
+.correct-answer {
+  background: green;
+  border-color: green;
+}
+
+.correct-answer:hover {
+  background: green;
+  border-color: green;
+}
+
+/* WRONG ANSWER */
+.wrong-answer {
+  background: red;
+  border-color: red;
+}
+
+.wrong-answer:hover {
+  background: red;
+  border-color: red;
+}
+
+.resultImage {
+  background: url("./images/hobqjg.jpg");
+  position: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.resultImage div {
+  font-family: Chewy;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 150px auto;
+  animation: createBox 0.5s;
+  width: 60%;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
